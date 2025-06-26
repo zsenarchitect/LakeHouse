@@ -83,13 +83,19 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', function() {
-    const animateElements = document.querySelectorAll('.service-card, .stat, .section-title');
+    const animateElements = document.querySelectorAll('.feature-card, .stat, .section-title');
     
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
+    });
+
+    // Screenshot gallery scroll animation
+    const screenshotItems = document.querySelectorAll('.screenshot-item');
+    screenshotItems.forEach(item => {
+        observer.observe(item);
     });
 });
 
@@ -117,5 +123,37 @@ window.addEventListener('scroll', () => {
     
     if (hero && floatingCard) {
         floatingCard.style.transform = `translateY(${scrolled * 0.2}px)`;
+    }
+});
+
+// Modal functionality for gallery
+function openModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    if (modal && modalImg) {
+        modal.style.display = 'block';
+        modalImg.src = imageSrc;
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Close modal when clicking outside the image
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('imageModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
     }
 }); 
