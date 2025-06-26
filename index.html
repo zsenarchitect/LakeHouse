@@ -22,10 +22,10 @@
                     <a href="#features" class="nav-link">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a href="resources.html" class="nav-link">Resources</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a href="demo.html" class="nav-link">Demo</a>
+                    <a href="resources.html" class="nav-link">Resources</a>
                 </li>
                 <li class="nav-item">
                     <a href="#about" class="nav-link">About</a>
@@ -50,7 +50,7 @@
                     Design, collaborate, and deliver exceptional projects with ease and precision.
                 </p>
                 <div class="hero-buttons">
-                    <a href="resources.html" class="btn btn-primary">Get Started</a>
+                    <a href="#gallery" class="btn btn-primary">View Gallery</a>
                     <a href="#features" class="btn btn-secondary">Explore Features</a>
                 </div>
             </div>
@@ -96,6 +96,94 @@
         </div>
     </section>
 
+    <!-- Screenshot Gallery Section -->
+    <section id="gallery" class="screenshot-gallery">
+        <div class="container">
+            <h2 class="section-title">LakeHouse in Action</h2>
+            <p class="gallery-description">See how our area takeoff toolkit streamlines architectural workflows</p>
+            
+            <div class="screenshot-item">
+                <div class="screenshot-container">
+                    <div class="screenshot-info">
+                        <h3>Main Viewport Interface</h3>
+                        <p>The main LakeHouse viewport provides comprehensive area takeoff tools with precision and clarity.</p>
+                        <ul class="screenshot-features">
+                            <li>Interactive drawing viewport</li>
+                            <li>Real-time area calculations</li>
+                            <li>Multi-layer visualization</li>
+                            <li>Precision measurement tools</li>
+                        </ul>
+                    </div>
+                    <div class="screenshot-image" onclick="openModal('asset/areatakeoff/main viewport.png')">
+                        <img src="asset/areatakeoff/main viewport.png" alt="Main Viewport Interface">
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-item">
+                <div class="screenshot-container reverse">
+                    <div class="screenshot-info">
+                        <h3>Layer Management System</h3>
+                        <p>Efficiently organize and manage your drawing layers with advanced layer controls.</p>
+                        <ul class="screenshot-features">
+                            <li>Dynamic layer organization</li>
+                            <li>Individual layer controls</li>
+                            <li>Area summaries per layer</li>
+                            <li>Batch layer operations</li>
+                        </ul>
+                    </div>
+                    <div class="screenshot-image" onclick="openModal('asset/areatakeoff/layertable.png')">
+                        <img src="asset/areatakeoff/layertable.png" alt="Layer Management System">
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-item">
+                <div class="screenshot-container">
+                    <div class="screenshot-info">
+                        <h3>Control Panel & Tools</h3>
+                        <p>Access all LakeHouse features through our streamlined GUI interface.</p>
+                        <ul class="screenshot-features">
+                            <li>Intuitive tool palette</li>
+                            <li>Quick access controls</li>
+                            <li>Customizable workspace</li>
+                            <li>Professional workflow tools</li>
+                        </ul>
+                    </div>
+                    <div class="screenshot-image" onclick="openModal('asset/areatakeoff/gui.png')">
+                        <img src="asset/areatakeoff/gui.png" alt="GUI Control Panel">
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-item">
+                <div class="screenshot-container reverse">
+                    <div class="screenshot-info">
+                        <h3>Excel Integration & Reporting</h3>
+                        <p>Seamlessly export your area calculations and project data to Excel.</p>
+                        <ul class="screenshot-features">
+                            <li>Direct Excel export</li>
+                            <li>Automated report generation</li>
+                            <li>Detailed area breakdowns</li>
+                            <li>Professional formatting</li>
+                        </ul>
+                    </div>
+                    <div class="screenshot-image" onclick="openModal('asset/areatakeoff/excel.png')">
+                        <img src="asset/areatakeoff/excel.png" alt="Excel Integration">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Screenshot">
+        </div>
+    </div>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -131,38 +219,7 @@
         </div>
     </section>
 
-    <!-- Get Started Section -->
-    <section id="get-started" class="get-started">
-        <div class="container">
-            <h2 class="section-title">Ready to Transform Your Workflow?</h2>
-            <div class="get-started-content">
-                <div class="get-started-info">
-                    <h3>Start Your Architectural Journey</h3>
-                    <p>Join thousands of architects who have already enhanced their workflow with LakeHouse. 
-                       Get started with our comprehensive toolkit today.</p>
-                    <div class="quick-links">
-                        <a href="resources.html" class="quick-link">
-                            <span class="link-icon">📚</span>
-                            <span>Installation Guide</span>
-                        </a>
-                        <a href="demo.html" class="quick-link">
-                            <span class="link-icon">🎮</span>
-                            <span>Try Demo</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="get-started-visual">
-                    <div class="workflow-preview">
-                        <div class="workflow-step">Design</div>
-                        <div class="workflow-arrow">→</div>
-                        <div class="workflow-step">Collaborate</div>
-                        <div class="workflow-arrow">→</div>
-                        <div class="workflow-step">Deliver</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -174,9 +231,10 @@
                 </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
-                    <a href="#services">Services</a>
+                    <a href="#features">Features</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="resources.html">Resources</a>
                     <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
                 </div>
             </div>
             <div class="footer-bottom">
