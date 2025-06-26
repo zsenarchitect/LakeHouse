@@ -229,6 +229,12 @@ section {
     animation: float 6s ease-in-out infinite;
 }
 
+.floating-card.wide {
+    width: 500px;
+    height: auto;
+    padding: 3rem;
+}
+
 .card-header {
     height: 12px;
     background: linear-gradient(90deg, #00ffff 0%, #00d9ff 100%);
@@ -699,13 +705,47 @@ section {
     color: #b3b3b3;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        border-top: 1px solid rgba(0, 255, 255, 0.2);
+        z-index: 999;
+        padding: 2rem 0;
     }
 
-    .nav-menu {
-        display: none;
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .hero-container {
