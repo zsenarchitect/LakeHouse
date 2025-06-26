@@ -13,6 +13,15 @@ body {
     background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
 }
 
+/* Smooth scrolling between sections */
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    transition: all 0.6s ease-in-out;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -102,7 +111,7 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 197, 253, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(147, 197, 253, 0.04) 50%, rgba(219, 234, 254, 0.6) 100%);
     display: flex;
     align-items: center;
     position: relative;
@@ -333,63 +342,10 @@ body {
     line-height: 1.7;
 }
 
-/* About Section */
-.about {
-    padding: 120px 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(240, 249, 255, 0.6) 100%);
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.about-text p {
-    margin-bottom: 1.8rem;
-    color: #475569;
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-.about-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.stat {
-    text-align: center;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(30, 64, 175, 0.9) 100%);
-    color: white;
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-}
-
-.stat:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-}
-
-.stat h3 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-}
-
-.stat p {
-    opacity: 0.95;
-    font-weight: 500;
-}
-
 /* Installation Section */
 .installation-section {
     padding: 120px 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(240, 249, 255, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(226, 232, 240, 0.7) 50%, rgba(30, 64, 175, 0.15) 100%);
 }
 
 .installation-content {
@@ -461,6 +417,8 @@ body {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .installation-image:hover {
@@ -508,7 +466,7 @@ body {
 /* Screenshot Gallery */
 .screenshot-gallery {
     padding: 120px 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(240, 249, 255, 0.3) 100%);
+    background: linear-gradient(135deg, rgba(219, 234, 254, 0.6) 0%, rgba(147, 197, 253, 0.3) 50%, rgba(248, 250, 252, 0.9) 100%);
 }
 
 .gallery-description {
@@ -535,7 +493,10 @@ body {
     transition: all 0.3s ease;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .video-container:hover {
@@ -547,9 +508,10 @@ body {
     width: 100%;
     height: auto;
     max-height: 600px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     border-radius: 20px;
+    max-width: 100%;
 }
 
 .video-overlay {
@@ -664,6 +626,8 @@ body {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    object-fit: contain;
 }
 
 /* Modal */
@@ -827,20 +791,42 @@ body {
         direction: ltr;
     }
     
-    .video-container {
+        .video-container {
         margin: 0 10px;
+        max-width: calc(100vw - 20px);
+        padding: 0 10px;
     }
-    
+
+    .demo-video {
+        max-width: 100%;
+        height: auto;
+    }
+
     .video-overlay {
         padding: 2rem 1rem 1rem;
     }
-    
+
     .video-overlay h3 {
         font-size: 1.2rem;
     }
-    
+
+    .screenshot-image {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .screenshot-image img {
+        max-width: 100%;
+        width: 100%;
+    }
+
     .installation-content {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+
+    .installation-image {
+        max-width: 100%;
+        margin: 0;
     }
 } 
