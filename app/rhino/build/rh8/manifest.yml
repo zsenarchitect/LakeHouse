@@ -1,0 +1,10 @@
+---
+name: LakeHouse
+version: 2025.7.1+9308
+authors:
+- Sen Zhang
+description: 'Command: LakeHouseAreaTakeOff'
+license: MIT
+url: https://github.com/zsenarchitect/LakeHouse
+keywords:
+- guid:edfc425d-64ed-4a61-908b-51972a728373

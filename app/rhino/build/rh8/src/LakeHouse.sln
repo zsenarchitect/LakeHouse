@@ -1,0 +1,18 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{edfc425d-64ed-4a61-908b-51972a728373}") = "LakeHouse", "LakeHouse\LakeHouse.csproj", "{c80d59cc-5c7f-4177-a67a-68120ca883ef}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{c80d59cc-5c7f-4177-a67a-68120ca883ef}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c80d59cc-5c7f-4177-a67a-68120ca883ef}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c80d59cc-5c7f-4177-a67a-68120ca883ef}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{c80d59cc-5c7f-4177-a67a-68120ca883ef}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
