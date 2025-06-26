@@ -12,14 +12,11 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>LakeHouse</h2>
+                <h2>🏠</h2>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#features" class="nav-link">Features</a>
                 </li>
                 <li class="nav-item">
                     <a href="#installation" class="nav-link">Installation</a>
@@ -47,14 +44,14 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">LakeHouse</h1>
-                <h2 class="hero-subtitle">Architect Workflow Toolkit</h2>
+                <h2 class="hero-subtitle">Architect Workflow Toolkit(Beta)</h2>
                 <p class="hero-description">
-                    Streamline your architectural workflow with powerful, intuitive tools. 
-                    Design, collaborate, and deliver exceptional projects with ease and precision.
+                    Go Home Earlier.
+                    
                 </p>
                 <div class="hero-buttons">
-                    <a href="#gallery" class="btn btn-primary">View Gallery</a>
-                    <a href="#features" class="btn btn-secondary">Explore Features</a>
+                    <a href="#installation" class="btn btn-primary">Installation Guide</a>
+                    <a href="#gallery" class="btn btn-secondary">Gallery</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -70,67 +67,33 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Powerful Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏗️</div>
-                    <h3>Design Tools</h3>
-                    <p>Advanced parametric design tools that adapt to your architectural workflow and design process.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Workflow Automation</h3>
-                    <p>Streamline repetitive tasks and focus on creative design with intelligent automation features.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Team Collaboration</h3>
-                    <p>Seamless collaboration tools for architects, designers, and project teams working together.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Data Visualization</h3>
-                    <p>Transform complex architectural data into beautiful, interactive visualizations and reports.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Installation Section -->
     <section id="installation" class="installation-section">
         <div class="container">
             <div class="installation-content">
                 <div class="installation-info">
-                    <h2 class="section-title">Easy Installation</h2>
+                    <h2 class="section-title">Installation Guide</h2>
                     <p class="installation-description">
-                        Get started with LakeHouse in just a few simple steps. Our streamlined installation 
-                        process gets you up and running quickly so you can focus on what matters most - your architectural work.
+                        Install LakeHouse from Rhino 8+ package manager.
                     </p>
                     <div class="installation-steps">
                         <div class="step">
                             <span class="step-number">1</span>
-                            <span class="step-text">Download the installer package</span>
+                            <span class="step-text">Type in "PackageManager" at Rhino 8+ command line</span>
                         </div>
                         <div class="step">
                             <span class="step-number">2</span>
-                            <span class="step-text">Run the setup wizard</span>
+                            <span class="step-text">Search "LakeHouse" in the search bar</span>
                         </div>
                         <div class="step">
                             <span class="step-number">3</span>
-                            <span class="step-text">Launch and start creating</span>
+                            <span class="step-text">Click "Install", and allow automatic update when Rhino starts</span>
                         </div>
                     </div>
-                    <a href="resources.html" class="btn btn-primary">Download Now</a>
                 </div>
                 <div class="installation-visual">
                     <div class="installation-image">
-                        <div class="installation-placeholder">
-                            <span class="placeholder-text">Installation Screenshot</span>
-                            <small>Place your installation.png here</small>
-                        </div>
+                        <img src="asset/installation/package manager.png" alt="LakeHouse Installation Package Manager" onclick="openModal('asset/installation/package manager.png')">
                     </div>
                 </div>
             </div>
@@ -140,19 +103,44 @@
     <!-- Screenshot Gallery Section -->
     <section id="gallery" class="screenshot-gallery">
         <div class="container">
-            <h2 class="section-title">LakeHouse in Action</h2>
-            <p class="gallery-description">See how our area takeoff toolkit streamlines architectural workflows</p>
+            <h2 class="section-title">AreaTakeOff</h2>
+            <p class="gallery-description">Live Area Takeoff In Rhino Viewport. </p>
+            <p class="gallery-description">Command: <strong>LakeHouseAreaTakeOff</strong></p>
+            
+            <!-- Featured Video Demo -->
+            <div class="video-showcase">
+                <div class="video-container">
+                    <video 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        class="demo-video"
+                        onloadstart="this.volume=0"
+                    >
+                        <source src="asset/areatakeoff/Recording-20250625_212510.webm" type="video/webm">
+                        <source src="asset/areatakeoff/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay">
+                        <h3>LakeHouse Area Takeoff</h3>
+                        <p>Live Area Takeoff In Rhino Viewport.</p>
+                        <p>Command: <strong>LakeHouseAreaTakeOff</strong></p>
+                    </div>
+                </div>
+            </div>
             
             <div class="screenshot-item">
                 <div class="screenshot-container">
                     <div class="screenshot-info">
-                        <h3>Main Viewport Interface</h3>
-                        <p>The main LakeHouse viewport provides comprehensive area takeoff tools with precision and clarity.</p>
+                        <h3>Area Summary Right In Front Of You.</h3>
+                  
                         <ul class="screenshot-features">
-                            <li>Interactive drawing viewport</li>
-                            <li>Real-time area calculations</li>
-                            <li>Multi-layer visualization</li>
-                            <li>Precision measurement tools</li>
+                            <li>Interactive Drawing Viewport</li>
+                            <li>Real-Time Area Calculations.</li>
+                            <li>Dynamic Shape Merging.</li>
+                            <li>Auto Convert To m² Or ft² Regardless Of Your Model Unit System.</li>
+                    
                         </ul>
                     </div>
                     <div class="screenshot-image" onclick="openModal('asset/areatakeoff/main viewport.png')">
@@ -164,13 +152,12 @@
             <div class="screenshot-item">
                 <div class="screenshot-container reverse">
                     <div class="screenshot-info">
-                        <h3>Layer Management System</h3>
-                        <p>Efficiently organize and manage your drawing layers with advanced layer controls.</p>
+                        <h3>Simple Management By Layer Name</h3>
+                       
                         <ul class="screenshot-features">
-                            <li>Dynamic layer organization</li>
-                            <li>Individual layer controls</li>
-                            <li>Area summaries per layer</li>
-                            <li>Batch layer operations</li>
+                            <li>Just Need [GFA] In The Layer Name As Keyword.</li>
+                            <li>Take In Area Factor From Layer Name.</li>
+                           
                         </ul>
                     </div>
                     <div class="screenshot-image" onclick="openModal('asset/areatakeoff/layertable.png')">
@@ -182,13 +169,15 @@
             <div class="screenshot-item">
                 <div class="screenshot-container">
                     <div class="screenshot-info">
-                        <h3>Control Panel & Tools</h3>
-                        <p>Access all LakeHouse features through our streamlined GUI interface.</p>
+                        <h3>Customizable Control</h3>
+                        
                         <ul class="screenshot-features">
-                            <li>Intuitive tool palette</li>
-                            <li>Quick access controls</li>
-                            <li>Customizable workspace</li>
-                            <li>Professional workflow tools</li>
+                            <li>Global Active/Deactive Switch.</li>
+                          
+                            <li>Quick Sample Layer Setup.</li>
+                            <li>Export Your Summary To Excel.</li>
+                            <li>Customizable Text In Summary.</li>
+                            <li>Sensitive And UI Setting.</li>
                         </ul>
                     </div>
                     <div class="screenshot-image" onclick="openModal('asset/areatakeoff/gui.png')">
@@ -200,13 +189,12 @@
             <div class="screenshot-item">
                 <div class="screenshot-container reverse">
                     <div class="screenshot-info">
-                        <h3>Excel Integration & Reporting</h3>
-                        <p>Seamlessly export your area calculations and project data to Excel.</p>
+                        <h3>Export To Excel</h3>
+                   
                         <ul class="screenshot-features">
-                            <li>Direct Excel export</li>
-                            <li>Automated report generation</li>
-                            <li>Detailed area breakdowns</li>
-                            <li>Professional formatting</li>
+                            <li>Direct Excel Export.</li>
+                      
+                            <li>Numeric Formatting For Other Usage.</li>
                         </ul>
                     </div>
                     <div class="screenshot-image" onclick="openModal('asset/areatakeoff/excel.png')">
@@ -272,7 +260,6 @@
                 </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
-                    <a href="#features">Features</a>
                     <a href="#installation">Installation</a>
                     <a href="#gallery">Gallery</a>
                     <a href="resources.html">Resources</a>
@@ -280,7 +267,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 LakeHouse Architect Workflow Toolkit. All rights reserved.</p>
+                <p>&copy; 2025 LakeHouse. All rights reserved.</p>
             </div>
         </div>
     </footer>

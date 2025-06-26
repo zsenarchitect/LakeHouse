@@ -453,6 +453,14 @@ body {
     transition: all 0.3s ease;
     width: 100%;
     max-width: 400px;
+    cursor: pointer;
+}
+
+.installation-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .installation-image:hover {
@@ -511,6 +519,66 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Video Showcase Styles */
+.video-showcase {
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.video-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(59, 130, 246, 0.2);
+}
+
+.demo-video {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 3rem 2rem 2rem;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover .video-overlay {
+    transform: translateY(0);
+}
+
+.video-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.video-overlay p {
+    font-size: 1rem;
+    opacity: 0.9;
+    color: #e2e8f0;
 }
 
 .screenshot-item {
@@ -730,19 +798,20 @@ body {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .hero-buttons {
-        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
     }
     
     .features-grid {
@@ -758,9 +827,20 @@ body {
         direction: ltr;
     }
     
+    .video-container {
+        margin: 0 10px;
+    }
+    
+    .video-overlay {
+        padding: 2rem 1rem 1rem;
+    }
+    
+    .video-overlay h3 {
+        font-size: 1.2rem;
+    }
+    
     .installation-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
+        gap: 3rem;
     }
 } 
