@@ -3,11 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo - LakeHouse</title>
+    <title>Demo - LakeHouse Architect Toolkit</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Demo specific styles */
+        .demo-hero {
+            min-height: 70vh;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 197, 253, 0.05) 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screenshot-gallery {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(240, 249, 255, 0.3) 100%);
+        }
+
+        .screenshot-item {
+            margin-bottom: 150px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .screenshot-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .screenshot-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .screenshot-container.reverse {
+            direction: rtl;
+        }
+
+        .screenshot-container.reverse > * {
+            direction: ltr;
+        }
+
+        .screenshot-info {
+            padding: 2rem;
+        }
+
+        .screenshot-info h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+
+        .screenshot-info p {
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .screenshot-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .screenshot-features li {
+            padding: 0.5rem 0;
+            color: #3b82f6;
+            font-weight: 500;
+        }
+
+        .screenshot-features li::before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .screenshot-image {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .screenshot-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+        }
+
+        .screenshot-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 1.1rem;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screenshot-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .demo-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.02) 100%);
+            text-align: center;
+        }
+
+        .demo-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-cta p {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .screenshot-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .screenshot-container.reverse {
+                direction: ltr;
+            }
+            
+            .screenshot-info h3 {
+                font-size: 1.5rem;
+            }
+            
+            .demo-cta h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -23,45 +193,183 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <!-- Hero Section -->
+    <section class="demo-hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Interactive Demo</h1>
-                <p class="hero-description">Experience LakeHouse architect workflow toolkit in action</p>
+                <h1 class="hero-title">See LakeHouse in Action</h1>
+                <h2 class="hero-subtitle">Interactive Tool Demonstrations</h2>
+                <p class="hero-description">
+                    Explore the powerful features of our architect workflow toolkit through 
+                    real screenshots and examples from actual projects.
+                </p>
                 <div class="hero-buttons">
-                    <a href="#demo" class="btn btn-primary">Try Demo</a>
+                    <a href="#screenshots" class="btn btn-primary">View Screenshots</a>
                     <a href="resources.html" class="btn btn-secondary">Get Started</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="demo" class="features">
-        <div class="container">
-            <h2 class="section-title">Tool Demonstrations</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏗️</div>
-                    <h3>Design Tools</h3>
-                    <p>Experience our parametric design tools for architectural modeling and visualization.</p>
-                    <a href="#" class="btn btn-secondary">Try Tool</a>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Workflow Automation</h3>
-                    <p>See how automation can streamline your repetitive architectural tasks.</p>
-                    <a href="#" class="btn btn-secondary">Try Tool</a>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Data Visualization</h3>
-                    <p>Transform your project data into beautiful, interactive visualizations.</p>
-                    <a href="#" class="btn btn-secondary">Try Tool</a>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-header"></div>
+                    <div class="card-content">
+                        <div class="line"></div>
+                        <div class="line short"></div>
+                        <div class="line"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Screenshots Gallery -->
+    <section id="screenshots" class="screenshot-gallery">
+        
+        <!-- Screenshot 1: Design Interface -->
+        <div class="screenshot-item">
+            <div class="screenshot-container">
+                <div class="screenshot-info">
+                    <h3>Parametric Design Interface</h3>
+                    <p>
+                        Our intuitive design interface allows architects to create complex parametric models 
+                        with ease. The visual programming environment makes it simple to iterate and explore 
+                        design variations quickly.
+                    </p>
+                    <ul class="screenshot-features">
+                        <li>Visual node-based programming</li>
+                        <li>Real-time parameter adjustment</li>
+                        <li>Instant preview updates</li>
+                        <li>Component library integration</li>
+                    </ul>
+                </div>
+                <div class="screenshot-image">
+                    <div class="screenshot-placeholder">
+                        Design Interface Screenshot
+                        <br><small>design-interface.png</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenshot 2: 3D Modeling -->
+        <div class="screenshot-item">
+            <div class="screenshot-container reverse">
+                <div class="screenshot-info">
+                    <h3>3D Modeling Workspace</h3>
+                    <p>
+                        Advanced 3D modeling tools specifically designed for architectural workflows. 
+                        Create detailed building models with precision and efficiency using our 
+                        specialized modeling environment.
+                    </p>
+                    <ul class="screenshot-features">
+                        <li>Architectural-specific tools</li>
+                        <li>Precision modeling controls</li>
+                        <li>Multi-viewport workspace</li>
+                        <li>Real-time rendering preview</li>
+                    </ul>
+                </div>
+                <div class="screenshot-image">
+                    <div class="screenshot-placeholder">
+                        3D Modeling Workspace
+                        <br><small>3d-modeling.png</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenshot 3: Collaboration Tools -->
+        <div class="screenshot-item">
+            <div class="screenshot-container">
+                <div class="screenshot-info">
+                    <h3>Team Collaboration Dashboard</h3>
+                    <p>
+                        Seamlessly collaborate with your team members in real-time. Share projects, 
+                        track changes, and coordinate workflows all within the LakeHouse environment.
+                    </p>
+                    <ul class="screenshot-features">
+                        <li>Real-time collaboration</li>
+                        <li>Version control integration</li>
+                        <li>Comment and review system</li>
+                        <li>Team activity tracking</li>
+                    </ul>
+                </div>
+                <div class="screenshot-image">
+                    <div class="screenshot-placeholder">
+                        Collaboration Dashboard
+                        <br><small>collaboration-tools.png</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenshot 4: Data Visualization -->
+        <div class="screenshot-item">
+            <div class="screenshot-container reverse">
+                <div class="screenshot-info">
+                    <h3>Data Visualization Suite</h3>
+                    <p>
+                        Transform your project data into beautiful, interactive visualizations. 
+                        Generate reports, charts, and analytics that help you make informed 
+                        design decisions.
+                    </p>
+                    <ul class="screenshot-features">
+                        <li>Interactive charts and graphs</li>
+                        <li>Automated report generation</li>
+                        <li>Custom visualization templates</li>
+                        <li>Export to multiple formats</li>
+                    </ul>
+                </div>
+                <div class="screenshot-image">
+                    <div class="screenshot-placeholder">
+                        Data Visualization
+                        <br><small>data-visualization.png</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenshot 5: Workflow Automation -->
+        <div class="screenshot-item">
+            <div class="screenshot-container">
+                <div class="screenshot-info">
+                    <h3>Workflow Automation Panel</h3>
+                    <p>
+                        Automate repetitive tasks and streamline your architectural workflow. 
+                        Create custom scripts and automation rules that save time and reduce errors.
+                    </p>
+                    <ul class="screenshot-features">
+                        <li>Visual automation builder</li>
+                        <li>Custom script integration</li>
+                        <li>Batch processing tools</li>
+                        <li>Scheduled task execution</li>
+                    </ul>
+                </div>
+                <div class="screenshot-image">
+                    <div class="screenshot-placeholder">
+                        Automation Panel
+                        <br><small>workflow-automation.png</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Call to Action -->
+    <section class="demo-cta">
+        <div class="container">
+            <h2>Ready to Experience LakeHouse?</h2>
+            <p>
+                Download LakeHouse today and transform your architectural workflow. 
+                Join thousands of architects who are already using our toolkit to create amazing projects.
+            </p>
+            <div class="hero-buttons">
+                <a href="resources.html" class="btn btn-primary">Download Now</a>
+                <a href="index.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -76,9 +384,52 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 LakeHouse. All rights reserved.</p>
+                <p>&copy; 2024 LakeHouse Architect Workflow Toolkit. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Scroll animation for screenshots
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const screenshotObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+                // Optional: Remove visible class when scrolling up
+                // else {
+                //     entry.target.classList.remove('visible');
+                // }
+            });
+        }, observerOptions);
+
+        // Observe all screenshot items
+        document.addEventListener('DOMContentLoaded', function() {
+            const screenshotItems = document.querySelectorAll('.screenshot-item');
+            screenshotItems.forEach(item => {
+                screenshotObserver.observe(item);
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
