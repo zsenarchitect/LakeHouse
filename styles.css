@@ -706,6 +706,17 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .floating-card.wide {
+        width: 85%;
+        max-width: 450px;
+    }
+
+    .hero-container {
+        gap: 3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -751,6 +762,7 @@ section {
     .hero-container {
         grid-template-columns: 1fr;
         gap: 2rem;
+        padding: 0 20px;
     }
 
     .hero-title {
@@ -759,6 +771,21 @@ section {
 
     .hero-subtitle {
         font-size: 1.2rem;
+    }
+
+    .floating-card.wide {
+        width: 90%;
+        max-width: 400px;
+        padding: 2rem;
+    }
+
+    .hero-buttons {
+        gap: 0.8rem;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
     }
 
     .about-content {
@@ -776,6 +803,10 @@ section {
 }
 
 @media (max-width: 480px) {
+    .hero-container {
+        padding: 0 15px;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -790,6 +821,22 @@ section {
 
     .hero-buttons {
         flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .floating-card.wide {
+        width: 95%;
+        max-width: 320px;
+        padding: 1.5rem;
     }
 
     .features-grid {
