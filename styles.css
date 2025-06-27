@@ -240,7 +240,8 @@ section {
     border: 1px solid rgba(0, 200, 200, 0.2);
     border-radius: 20px;
     padding: 2rem;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     box-shadow: 0 20px 40px rgba(0, 200, 200, 0.1);
     animation: float 6s ease-in-out infinite;
     position: relative;
@@ -332,7 +333,7 @@ section {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 2rem;
 }
 
@@ -863,7 +864,7 @@ section {
     }
 
     .floating-card {
-        width: 260px;
+        max-width: 260px;
     }
 
     .hero-container {
