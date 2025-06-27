@@ -941,6 +941,7 @@ section {
 
     .hero-buttons {
         gap: 0.8rem;
+        justify-content: center;
     }
 
     .btn {
@@ -993,14 +994,19 @@ section {
         flex-direction: column;
         gap: 0.8rem;
         width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
     }
 
     .btn {
-        width: 100%;
+        width: auto;
+        min-width: 200px;
         max-width: 280px;
         padding: 12px 20px;
         font-size: 0.9rem;
         text-align: center;
+        display: inline-block;
     }
 
     .floating-card {
