@@ -11,6 +11,19 @@ html, body {
     overflow-x: hidden;
 }
 
+/* Ensure all sections respect viewport width */
+section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Constrain all containers */
+.container, .hero-container, .nav-container, .installation-content, .contact-content, .footer-content {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     line-height: 1.6;
@@ -232,6 +245,8 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
 }
 
 .floating-card {
@@ -822,6 +837,9 @@ section {
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .footer-brand h3 {
@@ -838,6 +856,8 @@ section {
 .footer-links {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-links a {
@@ -869,6 +889,22 @@ section {
 
     .hero-container {
         gap: 3rem;
+    }
+}
+
+/* Medium tablets and landscape phones */
+@media (max-width: 900px) {
+    .floating-card {
+        max-width: 240px;
+    }
+    
+    .hero-cards-container {
+        gap: 1.2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+        gap: 1.5rem;
     }
 }
 
@@ -969,6 +1005,8 @@ section {
 
     .footer-links {
         justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
     }
 
     .contact-card {
@@ -1032,6 +1070,7 @@ section {
 
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .screenshot-container {
@@ -1094,6 +1133,18 @@ section {
     .contact-email {
         font-size: 1rem;
     }
+    
+    .footer-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        line-height: 1.6;
+    }
+    
+    .footer-links a {
+        padding: 0.2rem 0;
+        min-width: fit-content;
+    }
 }
 
 /* Additional mobile fixes for very small screens */
@@ -1121,5 +1172,16 @@ section {
     
     .hero-container, .container {
         padding: 0 15px;
+    }
+    
+    .footer-links {
+        gap: 0.8rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-links a {
+        padding: 0.3rem 0;
+        text-align: center;
     }
 }
