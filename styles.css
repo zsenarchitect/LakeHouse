@@ -986,6 +986,26 @@ section {
     .screenshot-container.reverse {
         direction: ltr;
     }
+    
+    .screenshot-item {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        direction: ltr;
+    }
+    
+    .screenshot-item:nth-child(even) {
+        direction: ltr;
+    }
+    
+    .screenshot-info {
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    .screenshot-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1053,6 +1073,14 @@ section {
     
     .video-overlay h3 {
         font-size: 1.5rem;
+    }
+    
+    .screenshot-item {
+        gap: 1.5rem;
+    }
+    
+    .screenshot-info h3 {
+        font-size: 1.3rem;
     }
     
     .screenshot-image {
@@ -1132,6 +1160,19 @@ section {
     
     .footer-links a {
         font-size: 0.9rem;
+    }
+    
+    .screenshot-item {
+        gap: 1rem;
+    }
+    
+    .screenshot-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .screenshot-features li {
+        font-size: 0.9rem;
+        padding-left: 1.5rem;
     }
 }
 
