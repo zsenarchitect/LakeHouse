@@ -393,4 +393,31 @@ document.addEventListener('DOMContentLoaded', function() {
             el.classList.remove('focus-visible');
         });
     });
+});
+
+// Responsive DOM reordering for floating cards on mobile
+function reorderHeroCardsForMobile() {
+    const heroContainer = document.querySelector('.hero-container');
+    const heroButtons = document.querySelector('.hero-buttons');
+    const heroVisual = document.querySelector('.hero-visual');
+    const heroCards = document.querySelector('.hero-cards-container');
+    if (!heroContainer || !heroButtons || !heroVisual || !heroCards) return;
+
+    if (window.innerWidth <= 768) {
+        // Move cards after buttons if not already there
+        if (heroButtons.nextElementSibling !== heroCards) {
+            heroButtons.parentNode.insertBefore(heroCards, heroButtons.nextElementSibling);
+        }
+    } else {
+        // Restore cards to hero-visual if not already there
+        if (heroVisual && heroVisual.firstElementChild !== heroCards) {
+            heroVisual.appendChild(heroCards);
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    reorderHeroCardsForMobile();
+    window.addEventListener('resize', reorderHeroCardsForMobile);
+    window.addEventListener('orientationchange', reorderHeroCardsForMobile);
 }); 
