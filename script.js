@@ -215,6 +215,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 150);
         });
     });
+    
+    // Fallback: Ensure images are visible after a timeout in case observer fails
+    setTimeout(() => {
+        const hiddenScreenshotItems = document.querySelectorAll('.screenshot-item[style*="opacity: 0"]');
+        hiddenScreenshotItems.forEach(item => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        });
+    }, 2000);
 });
 
 // Enhanced parallax effect with mobile optimization
@@ -305,13 +314,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Optimize images for mobile
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        img.addEventListener('load', () => {
+        // Set initial opacity based on whether image is already loaded
+        if (img.complete && img.naturalHeight !== 0) {
             img.style.opacity = '1';
-        });
-        
-        // Add loading state
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 0.3s ease';
+        } else {
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.3s ease';
+            img.addEventListener('load', () => {
+                img.style.opacity = '1';
+            });
+            img.addEventListener('error', () => {
+                img.style.opacity = '1'; // Show even if there's an error
+            });
+        }
     });
     
     // Add lazy loading for images
