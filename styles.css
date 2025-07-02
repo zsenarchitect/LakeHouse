@@ -461,12 +461,12 @@ section {
 }
 
 .installation-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 30px 60px rgba(0, 200, 200, 0.2);
 }
 
 .installation-image:hover img {
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 .installation-placeholder {
@@ -547,12 +547,12 @@ section {
 }
 
 .screenshot-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 30px 60px rgba(0, 200, 200, 0.2);
 }
 
 .screenshot-image:hover img {
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 .screenshot-info {
