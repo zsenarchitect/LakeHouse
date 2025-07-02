@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ObjManager - LakeHouse Software Solution</title>
+    <title>ContentMerge - LakeHouse Software Solution</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -58,11 +58,11 @@
     <section class="hero" style="min-height: 50vh;">
         <div class="hero-container" style="grid-template-columns: 1fr;">
             <div class="hero-content" style="text-align: center;">
-                <h1 class="hero-title">ObjManager</h1>
+                <h1 class="hero-title">ContentMerge</h1>
                 <p class="hero-description">
-                    Batch Object Transformation
+                    Merge Layers & Materials Effortlessly
                 </p>
-                <p class="gallery-description">Command: <strong>LakeHouseObjManager</strong></p>
+                <p class="gallery-description">Command: <strong>LakeHouseContentMerge</strong></p>
             </div>
         </div>
     </section>
@@ -81,22 +81,51 @@
                         class="demo-video"
                         onloadstart="this.volume=0"
                     >
-                        <source src="asset/objmanager/video.webm" type="video/webm">
-                        <source src="asset/objmanager/video.mp4" type="video/mp4">
+                        <source src="asset/contentmerger/video1.webm" type="video/webm">
+                        <source src="asset/contentmerger/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="video-showcase">
+                <div class="video-container">
+                    <video 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        class="demo-video"
+                        onloadstart="this.volume=0"
+                    >
+                        <source src="asset/contentmerger/video2.webm" type="video/webm">
+                        <source src="asset/contentmerger/video2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
             <div class="screenshot-item">
-                <div class="screenshot-image" onclick="openModal('asset/objmanager/gui.png')">
-                    <img src="asset/objmanager/gui.png" alt="ObjManager Interface">
+                <div class="screenshot-image" onclick="openModal('asset/contentmerger/merge layer.png')">
+                    <img src="asset/contentmerger/merge layer.png" alt="Merge Layer Screenshot">
                 </div>
                 <div class="screenshot-info">
-                    <h3>Batch<br>Transformation</h3>
+                    <h3>Merge Layers</h3>
                     <ul class="screenshot-features">
-                        <li>Random Or Fixed Rotation Angle</li>
-                        <li>Random Height Variation</li>
-                        <li>Scale Sensitivity Customizable</li>
+                        <li>Combine multiple layers into one</li>
+                        <li>Preserve object properties</li>
+                        <li>Reduce model complexity</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="screenshot-item">
+                <div class="screenshot-image" onclick="openModal('asset/contentmerger/merge material.png')">
+                    <img src="asset/contentmerger/merge material.png" alt="Merge Material Screenshot">
+                </div>
+                <div class="screenshot-info">
+                    <h3>Merge Materials</h3>
+                    <ul class="screenshot-features">
+                        <li>Unify materials across objects</li>
+                        <li>Easy material reassignment</li>
+                        <li>Streamline rendering workflow</li>
                     </ul>
                 </div>
             </div>
