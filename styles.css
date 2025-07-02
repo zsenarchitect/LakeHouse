@@ -893,8 +893,8 @@ section {
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 2rem 0;
-        gap: 1rem;
+        padding: 1rem 0;
+        gap: 0.3rem;
         border-bottom: 1px solid rgba(0, 200, 200, 0.1);
     }
     
@@ -903,7 +903,7 @@ section {
     }
     
     .nav-item {
-        margin: 1rem 0;
+        margin: 0.3rem 0;
     }
     
     .hamburger.active .bar:nth-child(2) {
