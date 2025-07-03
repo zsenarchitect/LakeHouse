@@ -420,38 +420,4 @@ document.addEventListener('DOMContentLoaded', function() {
     reorderHeroCardsForMobile();
     window.addEventListener('resize', reorderHeroCardsForMobile);
     window.addEventListener('orientationchange', reorderHeroCardsForMobile);
-});
-
-// Feature Carousel Logic (vertical slide/fade effect)
-(function() {
-    const cards = Array.from(document.querySelectorAll('#feature-carousel .floating-card'));
-    if (!cards.length) return;
-    const VISIBLE_COUNT = 3;
-    let start = 0;
-    let interval = null;
-
-    function updateClasses() {
-        cards.forEach(card => {
-            card.classList.remove('carousel-top', 'carousel-center', 'carousel-bottom', 'carousel-hidden');
-        });
-        const total = cards.length;
-        // Calculate indices for top, center, bottom
-        const topIdx = (start) % total;
-        const centerIdx = (start + 1) % total;
-        const bottomIdx = (start + 2) % total;
-        cards.forEach((card, idx) => {
-            if (idx === topIdx) card.classList.add('carousel-top');
-            else if (idx === centerIdx) card.classList.add('carousel-center');
-            else if (idx === bottomIdx) card.classList.add('carousel-bottom');
-            else card.classList.add('carousel-hidden');
-        });
-    }
-
-    function next() {
-        start = (start + 1) % cards.length;
-        updateClasses();
-    }
-
-    updateClasses();
-    interval = setInterval(next, 3000);
-})(); 
+}); 
