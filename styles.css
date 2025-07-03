@@ -193,6 +193,7 @@ section {
     font-weight: 300;
     letter-spacing: 0;
     max-width: 450px;
+    text-align: left !important;
 }
 
 .hero-buttons {
