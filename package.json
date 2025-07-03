@@ -1,0 +1,22 @@
+{
+  "name": "lakehouse-website",
+  "version": "1.0.0",
+  "description": "LakeHouse Rhino Plugin Website",
+  "main": "seo-generator.js",
+  "scripts": {
+    "seo": "node seo-generator.js",
+    "seo:watch": "node seo-generator.js && echo 'Watching for changes...' && fswatch -o . | xargs -n1 -I{} node seo-generator.js"
+  },
+  "keywords": [
+    "rhino",
+    "plugin",
+    "architecture",
+    "seo",
+    "website"
+  ],
+  "author": "LakeHouse",
+  "license": "MIT",
+  "devDependencies": {
+    "fswatch": "^1.0.0"
+  }
+} 
