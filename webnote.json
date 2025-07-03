@@ -1,0 +1,38 @@
+{
+    "feature_note": {
+        "feature_areatakeoff": {
+            "title": "AreaTakeOff",
+            "description": "Live Area Takeoff In Rhino Viewport",
+            "command": "LakeHouseAreaTakeOff"
+        },
+        "feature_objmanager": {
+            "title": "ObjManager",
+            "description": "Batch Object Transformation",
+            "command": "LakeHouseObjManager"
+        },
+        "feature_contentmerger": {
+            "title": "ContentMerger",
+            "description": "Merge Layers & Materials Effortlessly",
+            "command": "LakeHouseContentMerger"
+        },
+        "feature_layercolorrandomizer": {
+            "title": "LayerColorRandomizer",
+            "description": "Randomize Layer Colors Instantly",
+            "command": "LakeHouseLayerColorRandomizer"
+        },
+        "feature_randomselect": {
+            "title": "RandomSelect",
+            "description": "Smart Random Object Selection",
+            "command": "LakeHouseRandomSelect"
+        }
+    },
+    "shared_note": {
+        "slogan": "Make Architects Go-Home-Early Again.",
+        "navigation": {
+            "home": "Home",
+            "feature": "Feature",
+            "installation": "Installation",
+            "contact": "Contact"
+        }
+    }
+}
