@@ -2,27 +2,32 @@
     "feature_note": {
         "feature_areatakeoff": {
             "title": "AreaTakeOff",
-            "description": "Live Area Takeoff In Rhino Viewport",
+            "description_card": "Dynamic Area Takeoff Summary In Rhino Viewport",
+            "description_page": "Live area takeoff in Rhino viewport by looking up the bottom surface of the objects that pass the layer keyword filter. The calculation shape is visualized in the viewport via display conduit, and area summary is dynamically calculated on the fly. Great for massing study with specific area target in mind.",
             "command": "LakeHouseAreaTakeOff"
         },
         "feature_objmanager": {
             "title": "ObjManager",
-            "description": "Batch Object Transformation",
+            "description_card": "Batch Object Transformation With Random Rotation & Scale",
+            "description_page": "Batch object transformation to apply random or fixed rotation to picked objects, as well as apply a random vertical scale to the picked objects. This is useful for creating random variation of a model such as entourage modification to achieve a less repetitive look.",
             "command": "LakeHouseObjManager"
         },
         "feature_contentmerger": {
             "title": "ContentMerger",
-            "description": "Merge Layers & Materials Effortlessly",
+            "description_card": "Merge Layers & Materials Effortlessly, Even In Block Definitions",
+            "description_page": "Merge layers and materials effortlessly, great for model cleanup, especially for models where you have block definitions that prevent layers from being deleted or selected, or models where you have previously imported content and have introduced material variation of the same design intent.",
             "command": "LakeHouseContentMerger"
         },
         "feature_layercolorrandomizer": {
             "title": "LayerColorRandomizer",
-            "description": "Randomize Layer Colors Instantly",
+            "description_card": "Randomize Layer Colors Instantly",
+            "description_page": "Randomize layer colors to allow quick visualization of the layers using different colors rather than default black or white.",
             "command": "LakeHouseLayerColorRandomizer"
         },
         "feature_randomselect": {
             "title": "RandomSelect",
-            "description": "Smart Random Object Selection",
+            "description_card": "Random Object Selection Assistant",
+            "description_page": "Randomly reduce selection by desired percentage or break them into groups. Great for introducing variation for rendering purposes.",
             "command": "LakeHouseRandomSelect"
         }
     },
