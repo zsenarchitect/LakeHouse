@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://zsenarchitect.github.io/LakeHouse/sitemap.xml
+Sitemap: https://lakehouse-design.com/sitemap.xml
 
 # Disallow any private or admin areas (if you add them later)
 # Disallow: /admin/
