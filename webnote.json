@@ -29,6 +29,12 @@
             "description_card": "Random Object Selection Assistant",
             "description_page": "Randomly reduce selection by desired percentage or break them into groups. Great for introducing variation for rendering purposes.",
             "command": "LakeHouseRandomSelect"
+        },
+        "feature_blockusagepreview": {
+            "title": "PreviewBlockUsage",
+            "description_card": "Live Preview Block Usage In Model With Filter",
+            "description_page": "Preview block usage in model by looking up the block definitions and their usage count. You can also limit scheduling by using a keyword.",
+            "command": "LakeHousePreviewBlockUsage"
         }
     },
     "shared_note": {
