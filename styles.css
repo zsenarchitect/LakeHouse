@@ -1645,3 +1645,8 @@ html {
     gap: 0.5rem;
   }
 }
+
+/* Ensure command in gallery-description is always bold */
+.gallery-description strong {
+    font-weight: bold !important;
+}
