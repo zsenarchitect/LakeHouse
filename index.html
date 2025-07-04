@@ -46,6 +46,15 @@
       });
     </script>
     <!-- End Google tag -->
+    <script>
+      if (
+        location.hostname === "zsenarchitect.github.io" &&
+        location.pathname.startsWith("/LakeHouse")
+      ) {
+        var newPath = location.pathname.replace(/^\/LakeHouse/, "");
+        location.href = "https://lakehouse-design.com" + newPath + location.search + location.hash;
+      }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
