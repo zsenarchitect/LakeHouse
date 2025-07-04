@@ -413,6 +413,7 @@ section {
     transform: translateY(-10px) scale(1.05);
     border-color: rgba(0, 200, 200, 0.3);
     box-shadow: 0 20px 40px rgba(0, 200, 200, 0.2);
+    transition: transform 1.8s ease, border-color 1.8s ease, box-shadow 1.8s ease;
 }
 
 .feature-icon {
@@ -1707,4 +1708,18 @@ html {
 /* Ensure command in gallery-description is always bold */
 .gallery-description strong {
     font-weight: bold !important;
+}
+
+.feature-segment {
+    margin-bottom: 4rem;
+}
+
+.feature-segment-title {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #fff;
+}
+
+.feature-segment .features-grid {
+    margin-top: 0.5rem;
 }

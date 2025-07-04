@@ -9,7 +9,7 @@ Your website at [https://zsenarchitect.github.io/LakeHouse/](https://zsenarchite
 - **Home Page** (`index.html`) - Optimized for "LakeHouse Rhino plugin"
 - **Features Page** (`feature.html`) - Overview of all features
 - **AreaTakeOff** (`feature_areatakeoff.html`) - Optimized for "area takeoff Rhino"
-- **ObjManager** (`feature_objmanager.html`) - Optimized for "batch object transformation"
+- **ObjTransformationManager** (`feature_objtransformationmanager.html`) - Optimized for "batch object transformation"
 - **ContentMerger** (`feature_contentmerger.html`) - Optimized for "merge layers Rhino"
 - **LayerColorRandomizer** (`feature_layercolorrandomizer.html`) - Optimized for "randomize layer colors"
 - **RandomSelect** (`feature_randomselect.html`) - Optimized for "random selection"

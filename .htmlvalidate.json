@@ -1,0 +1,26 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "no-inline-style": "off",
+    "no-trailing-whitespace": "error",
+    "prefer-native-element": "off",
+    "void-style": "error",
+    "no-dup-attr": "error",
+    "no-unknown-elements": "off",
+    "svg-focusable": "off",
+    "no-raw-characters": "off",
+    "no-invalid-role": "off"
+  },
+  "elements": {
+    "svg": {
+      "attributes": {
+        "xmlns": { "required": true },
+        "xmlns:xlink": { "required": false },
+        "viewBox": { "required": true },
+        "width": { "required": false },
+        "height": { "required": false },
+        "fill-rule": { "required": false }
+      }
+    }
+  }
+} 

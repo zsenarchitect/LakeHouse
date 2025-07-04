@@ -19,9 +19,9 @@ const featurePages = {
         priority: 0.9,
         changefreq: 'monthly'
     },
-    'feature_objmanager.html': {
-        title: 'ObjManager - Batch Object Transformation in Rhino | LakeHouse',
-        description: 'LakeHouse ObjManager: Batch object transformation with random rotation, scale variation, and height adjustments. Create natural variation in architectural models.',
+    'feature_objtransformationmanager.html': {
+        title: 'ObjTransformationManager - Batch Object Transformation in Rhino | LakeHouse',
+        description: 'LakeHouse ObjTransformationManager: Batch object transformation with random rotation, scale variation, and height adjustments. Create natural variation in architectural models.',
         keywords: 'batch object transformation, random rotation Rhino, object scaling, architectural variation, entourage modification',
         priority: 0.9,
         changefreq: 'monthly'

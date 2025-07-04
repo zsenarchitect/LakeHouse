@@ -11,7 +11,7 @@ A comprehensive Rhino plugin toolkit designed to streamline architectural workfl
 ## 🏗️ Features
 
 - **AreaTakeOff**: Live area takeoff summary in Rhino viewport with dynamic calculations and Excel export
-- **ObjManager**: Batch object transformation with random rotation and scale for creating variation
+- **ObjTransformationManager**: Batch object transformation with random rotation and scale for creating variation
 - **ContentMerger**: Merge layers and materials effortlessly, even in block definitions
 - **LayerColorRandomizer**: Randomize layer colors instantly for quick visualization
 - **RandomSelect**: Smart random object selection for rendering variation

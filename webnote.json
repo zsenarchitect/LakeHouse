@@ -6,11 +6,11 @@
             "description_page": "Live area takeoff in Rhino viewport by looking up the bottom surface of the objects that pass the layer keyword filter. The calculation shape is visualized in the viewport via display conduit, and area summary is dynamically calculated on the fly. Great for massing study with specific area target in mind.",
             "command": "LakeHouseAreaTakeOff"
         },
-        "feature_objmanager": {
-            "title": "ObjManager",
+        "feature_objtransformationmanager": {
+            "title": "ObjTransformationManager",
             "description_card": "Batch Object Transformation With Random Rotation & Scale",
             "description_page": "Batch object transformation to apply random or fixed rotation to picked objects, as well as apply a random vertical scale to the picked objects. This is useful for creating random variation of a model such as entourage modification to achieve a less repetitive look.",
-            "command": "LakeHouseObjManager"
+            "command": "LakeHouseObjTransformationManager"
         },
         "feature_contentmerger": {
             "title": "ContentMerger",

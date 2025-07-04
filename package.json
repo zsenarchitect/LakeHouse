@@ -5,7 +5,11 @@
   "main": "seo-generator.js",
   "scripts": {
     "seo": "node seo-generator.js",
-    "seo:watch": "node seo-generator.js && echo 'Watching for changes...' && fswatch -o . | xargs -n1 -I{} node seo-generator.js"
+    "seo:watch": "node seo-generator.js && echo 'Watching for changes...' && fswatch -o . | xargs -n1 -I{} node seo-generator.js",
+    "lint": "eslint *.js",
+    "lint:fix": "eslint *.js --fix",
+    "html-validate": "html-validate *.html",
+    "css-validate": "stylelint styles.css"
   },
   "keywords": [
     "rhino",
@@ -17,6 +21,14 @@
   "author": "LakeHouse",
   "license": "MIT",
   "devDependencies": {
-    "fswatch": "^1.0.0"
+    "fswatch": "^1.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "html-validate": "^9.7.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0"
   }
 } 
