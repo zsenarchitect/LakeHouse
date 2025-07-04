@@ -59,10 +59,13 @@ The `script.js` file automatically:
 - Feature descriptions
 
 ### Feature Pages
-- Page titles
-- Feature descriptions
+- Page titles (hero section)
+- Feature descriptions (hero section)
 - Command names
 - Document titles
+- Meta descriptions
+- Open Graph titles and descriptions
+- Twitter Card titles and descriptions
 
 ## How to Update Content
 

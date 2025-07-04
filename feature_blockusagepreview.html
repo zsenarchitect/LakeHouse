@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AreaTakeOff - Live Area Calculations in Rhino | LakeHouse</title>
+    <title>PreviewBlockUsage - Live Preview Block Usage In Model | LakeHouse</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="LakeHouse AreaTakeOff: Live area takeoff in Rhino viewport with dynamic calculations, Excel export, and layer-based filtering. Perfect for massing studies and area analysis.">
-    <meta name="keywords" content="area takeoff, Rhino area calculation, live area measurement, architectural area analysis, massing study tools, LakeHouse">
+    <meta name="description" content="LakeHouse PreviewBlockUsage: Live preview block usage in model with filter capabilities. Preview block definitions and their usage count with keyword filtering for efficient model management.">
+    <meta name="keywords" content="block usage preview, Rhino block management, block definitions, model organization, architectural tools, LakeHouse">
     <meta name="author" content="LakeHouse">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="AreaTakeOff - Live Area Calculations in Rhino | LakeHouse">
-    <meta property="og:description" content="LakeHouse AreaTakeOff: Live area takeoff in Rhino viewport with dynamic calculations, Excel export, and layer-based filtering. Perfect for massing studies and area analysis.">
+    <meta property="og:title" content="PreviewBlockUsage - Live Preview Block Usage In Model | LakeHouse">
+    <meta property="og:description" content="LakeHouse PreviewBlockUsage: Live preview block usage in model with filter capabilities. Preview block definitions and their usage count with keyword filtering for efficient model management.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zsenarchitect.github.io/LakeHouse/feature_areatakeoff.html">
+    <meta property="og:url" content="https://zsenarchitect.github.io/LakeHouse/feature_blockusagepreview.html">
     <meta property="og:image" content="https://zsenarchitect.github.io/LakeHouse/asset/main_icon.svg">
     <meta property="og:site_name" content="LakeHouse">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AreaTakeOff - Live Area Calculations in Rhino | LakeHouse">
-    <meta name="twitter:description" content="LakeHouse AreaTakeOff: Live area takeoff in Rhino viewport with dynamic calculations, Excel export, and layer-based filtering. Perfect for massing studies and area analysis.">
+    <meta name="twitter:title" content="PreviewBlockUsage - Live Preview Block Usage In Model | LakeHouse">
+    <meta name="twitter:description" content="LakeHouse PreviewBlockUsage: Live preview block usage in model with filter capabilities. Preview block definitions and their usage count with keyword filtering for efficient model management.">
     <meta name="twitter:image" content="https://zsenarchitect.github.io/LakeHouse/asset/main_icon.svg">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://zsenarchitect.github.io/LakeHouse/feature_areatakeoff.html">
+    <link rel="canonical" href="https://zsenarchitect.github.io/LakeHouse/feature_blockusagepreview.html">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="asset/main_icon.svg">
@@ -80,9 +80,9 @@
     <section class="hero" style="min-height: 50vh;">
         <div class="hero-container" style="grid-template-columns: 1fr;">
             <div class="hero-content" style="text-align: center;">
-                <h1 class="hero-title">AreaTakeOff</h1>
-                <p class="hero-description">Live area takeoff in Rhino viewport by looking up the bottom surface of the objects that pass the layer keyword filter. The calculation shape is visualized in the viewport via display conduit, and area summary is dynamically calculated on the fly. Great for massing study with specific area target in mind.</p>
-                <p class="gallery-description">Command: <strong>LakeHouseAreaTakeOff</strong></p>
+                <h1 class="hero-title">PreviewBlockUsage</h1>
+                <p class="hero-description">Preview block usage in model by looking up the block definitions and their usage count. You can also limit scheduling by using a keyword. You can use the color coded block definition preview to detect usgae that might be hard to see in the model by appearance only.</p>
+                <p class="gallery-description">Command: <strong>LakeHousePreviewBlockUsage</strong></p>
             </div>
         </div>
     </section>
@@ -101,64 +101,36 @@
                         class="demo-video"
                         onloadstart="this.volume=0"
                     >
-                        <source src="asset/areatakeoff/video.mp4" type="video/mp4">
+                        <source src="asset/blockusagepreview/video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
             <div class="screenshot-item">
-                <div class="screenshot-image" onclick="openModal('asset/areatakeoff/main viewport.png')">
-                    <img src="asset/areatakeoff/main viewport.png" alt="Main Viewport Interface">
+                <div class="screenshot-image" onclick="openModal('asset/blockusagepreview/form.png')">
+                    <img src="asset/blockusagepreview/form.png" alt="Block Usage Preview Form">
                 </div>
                 <div class="screenshot-info">
-                    <h3>What You See<br>Is What You Get</h3>
+                    <h3>Live Block Usage<br>Preview Interface</h3>
                     <ul class="screenshot-features">
-                        <li>Interactive Drawing Viewport</li>
-                        <li>Real-Time Area Calculations</li>
-                        <li>Dynamic Shape Merging</li>
-                        <li>Auto Convert To m² Or ft² Regardless Of Your Model Unit System</li>
+                        <li>Real-Time Block Count</li>
+                        <li>Stable Color Coding For Block Definitions</li>
+                        <li>Keyword Filtering System</li>
+                        <li>Sort By Count</li>
+                        <li>Override Visibility Of Blocks If Needed</li>
                     </ul>
                 </div>
             </div>
-
             <div class="screenshot-item">
-                <div class="screenshot-image" onclick="openModal('asset/areatakeoff/layertable.png')">
-                    <img src="asset/areatakeoff/layertable.png" alt="Layer Management System">
+                <div class="screenshot-image" onclick="openModal('asset/blockusagepreview/excel.png')">
+                    <img src="asset/blockusagepreview/excel.png" alt="Block Usage Excel Output">
                 </div>
                 <div class="screenshot-info">
-                    <h3>Simple Management<br>By Layer Name</h3>
+                    <h3>Excel Export</h3>
                     <ul class="screenshot-features">
-                        <li>Just Need [AREA] In The Layer Name As Keyword</li>
-                        <li>Take In Area Factor From Layer Name Curly Bracket</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="screenshot-item">
-                <div class="screenshot-image" onclick="openModal('asset/areatakeoff/gui.png')">
-                    <img src="asset/areatakeoff/gui.png" alt="GUI Control Panel">
-                </div>
-                <div class="screenshot-info">
-                    <h3>Customizable Control</h3>
-                    <ul class="screenshot-features">
-                        <li>Global Active/Deactive Switch</li>
-                        <li>Quick Sample Layer Setup</li>
-                        <li>Export Your Summary To Excel</li>
-                        <li>Customizable Text In Summary</li>
-                        <li>Sensitive And UI Setting</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="screenshot-item">
-                <div class="screenshot-image" onclick="openModal('asset/areatakeoff/excel.png')">
-                    <img src="asset/areatakeoff/excel.png" alt="Excel Integration">
-                </div>
-                <div class="screenshot-info">
-                    <h3>Export To Excel</h3>
-                    <ul class="screenshot-features">
-                        <li>Direct Excel Export</li>
-                        <li>Numeric Formatting For Other Usage</li>
+                        <li>Structured Statistics Export</li>
+                        <li>What You See Is What You Get</li>
+                       
                     </ul>
                 </div>
             </div>
@@ -181,7 +153,7 @@
                     <h3>LakeHouse</h3>
                     <p>Make Architects Go-Home-Early Again</p>
                 </div>
-                                <div class="footer-links">
+                <div class="footer-links">
                     <a href="index.html#home">Home</a>
                     <a href="feature.html">Feature</a>
                     <a href="index.html#installation">Installation</a>

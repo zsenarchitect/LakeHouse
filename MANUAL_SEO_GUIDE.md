@@ -13,6 +13,7 @@ Your website at [https://zsenarchitect.github.io/LakeHouse/](https://zsenarchite
 - **ContentMerger** (`feature_contentmerger.html`) - Optimized for "merge layers Rhino"
 - **LayerColorRandomizer** (`feature_layercolorrandomizer.html`) - Optimized for "randomize layer colors"
 - **RandomSelect** (`feature_randomselect.html`) - Optimized for "random selection"
+- **PreviewBlockUsage** (`feature_blockusagepreview.html`) - Optimized for "block usage preview"
 - **Contact Page** (`contact.html`) - Optimized for "LakeHouse support"
 
 ### ✅ Technical SEO Files:

@@ -33,7 +33,7 @@
         "feature_blockusagepreview": {
             "title": "PreviewBlockUsage",
             "description_card": "Live Preview Block Usage In Model With Filter",
-            "description_page": "Preview block usage in model by looking up the block definitions and their usage count. You can also limit scheduling by using a keyword.",
+            "description_page": "Preview block usage in model by looking up the block definitions and their usage count. You can also limit scheduling by using a keyword. You can use the color coded block definition preview to detect usgae that might be hard to see in the model by appearance only.",
             "command": "LakeHousePreviewBlockUsage"
         }
     },

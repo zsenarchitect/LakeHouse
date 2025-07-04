@@ -46,6 +46,13 @@ const featurePages = {
         keywords: 'random selection, percentage selection, object grouping, rendering variation, design exploration',
         priority: 0.8,
         changefreq: 'monthly'
+    },
+    'feature_blockusagepreview.html': {
+        title: 'PreviewBlockUsage - Live Preview Block Usage In Model | LakeHouse',
+        description: 'LakeHouse PreviewBlockUsage: Live preview block usage in model with filter capabilities. Preview block definitions and their usage count with keyword filtering for efficient model management.',
+        keywords: 'block usage preview, Rhino block management, block definitions, model organization, architectural tools',
+        priority: 0.8,
+        changefreq: 'monthly'
     }
 };
 
